@@ -1,5 +1,60 @@
 # Changelog
 
+## [0.3.0](https://github.com/tillknuesting/open-feature-operator/compare/v0.2.23...v0.3.0) (2023-01-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* bump flagd version to 0.2.0 (connect refactor) ([#97](https://github.com/tillknuesting/open-feature-operator/issues/97))
+
+### Features
+
+* add ff shortname, commit httpSyncConfiguration ([11e4652](https://github.com/tillknuesting/open-feature-operator/commit/11e46528fcd06cdc0c8e6f46944656224cd97441))
+* adding artifacthub information ([#144](https://github.com/tillknuesting/open-feature-operator/issues/144)) ([65a5244](https://github.com/tillknuesting/open-feature-operator/commit/65a524445d1db8bb5608b88282a4d97a9bb6b74f))
+* backfill flagd-kubernetes-sync cluster role binding on startup ([#299](https://github.com/tillknuesting/open-feature-operator/issues/299)) ([02ca541](https://github.com/tillknuesting/open-feature-operator/commit/02ca541353afdbfe4cdc41f32f9399826d4f6fc5))
+* builds helm chart ([#137](https://github.com/tillknuesting/open-feature-operator/issues/137)) ([1525421](https://github.com/tillknuesting/open-feature-operator/commit/1525421229d43b17636dddb65d7b124e6477fe79))
+* bump flagd version to 0.2.0 (connect refactor) ([#97](https://github.com/tillknuesting/open-feature-operator/issues/97)) ([8118b9f](https://github.com/tillknuesting/open-feature-operator/commit/8118b9fcbaf0d3c66d6869369add645e388989de))
+* enables Kubernetes syncing for flagd ([#82](https://github.com/tillknuesting/open-feature-operator/issues/82)) ([933cd94](https://github.com/tillknuesting/open-feature-operator/commit/933cd943e3b2383ee388c9e65b83841387a15ca3))
+* introduce configurable resource limits for flagd sidecar ([e4affcf](https://github.com/tillknuesting/open-feature-operator/commit/e4affcfb0ccf13dc0406ef1c21c2b884a836f71f))
+* introduced v1beta1 of featureflagconfiguration CRD with conversion webhook to v1alpha1 ([a45bdef](https://github.com/tillknuesting/open-feature-operator/commit/a45bdef5eec87738ce731af5825daffeb69eb6cb))
+* metrics ([#111](https://github.com/tillknuesting/open-feature-operator/issues/111)) ([6016669](https://github.com/tillknuesting/open-feature-operator/commit/6016669ec46984d127951ee5d0ff02e7685f4d80))
+* pr github action workflow ([#96](https://github.com/tillknuesting/open-feature-operator/issues/96)) ([a719f8a](https://github.com/tillknuesting/open-feature-operator/commit/a719f8a33abc9b9599987314282cc4e7ac202d67))
+* stop creation and mounting of flagd-config config map in case of kubernetes sync-provider ([#126](https://github.com/tillknuesting/open-feature-operator/issues/126)) ([a1d9fe2](https://github.com/tillknuesting/open-feature-operator/commit/a1d9fe276a37259d01e6ed6239c0ebcd3a1e6611))
+* structured the featureflagconfiguration CRD ([b056c7c](https://github.com/tillknuesting/open-feature-operator/commit/b056c7cdd76f4653c1a728342687beaa8279e314))
+* upgrade flagd to v0.3.0 ([20571e1](https://github.com/tillknuesting/open-feature-operator/commit/20571e1018e102ffbcf01b2518fcbf8b66a287be))
+
+
+### Bug Fixes
+
+* add sbom to ouput name ([#182](https://github.com/tillknuesting/open-feature-operator/issues/182)) ([5e939a8](https://github.com/tillknuesting/open-feature-operator/commit/5e939a8f67fbd095c18a6a2172bb856fe61dd173))
+* artifact name and output file ([#187](https://github.com/tillknuesting/open-feature-operator/issues/187)) ([4dee157](https://github.com/tillknuesting/open-feature-operator/commit/4dee157d44c20fc925f9e33dbaae16c18f3d9b48))
+* build and push to docker registry on tag creation ([#121](https://github.com/tillknuesting/open-feature-operator/issues/121)) ([27c6f9c](https://github.com/tillknuesting/open-feature-operator/commit/27c6f9cbc298fb8bf578464e4c3f9f07402b87ab))
+* build and push to docker registry with tag as current release ([#123](https://github.com/tillknuesting/open-feature-operator/issues/123)) ([d4abda1](https://github.com/tillknuesting/open-feature-operator/commit/d4abda119e4a7c2dab7a2e0d335d44b1df07ec62))
+* bump flagd version to include change detection fix ([421cab6](https://github.com/tillknuesting/open-feature-operator/commit/421cab651f6ebe2ece1380fda7dc24d92838d6b5))
+* correcrt needs in asset release ([5ed4571](https://github.com/tillknuesting/open-feature-operator/commit/5ed45718ca189a15f7cdf4f8ddfc5864f189b1ce))
+* CVE-2022-32149 ([015c19a](https://github.com/tillknuesting/open-feature-operator/commit/015c19ac4455673902c365111816b021f893c485))
+* **deps:** update github.com/open-feature/schemas digest to 302d0fa ([#246](https://github.com/tillknuesting/open-feature-operator/issues/246)) ([7d22374](https://github.com/tillknuesting/open-feature-operator/commit/7d22374afb7a5e2e166550544d327ec7b5b3d1bf))
+* **deps:** update github.com/open-feature/schemas digest to d638ecf ([a984836](https://github.com/tillknuesting/open-feature-operator/commit/a98483696f467270783858046132f02b3d338ac2))
+* **deps:** update kubernetes packages to v0.25.3 ([8d6103d](https://github.com/tillknuesting/open-feature-operator/commit/8d6103d8d41e9fc6f3854ef6a27293a754160ff5))
+* **deps:** update kubernetes packages to v0.25.4 ([75bab2d](https://github.com/tillknuesting/open-feature-operator/commit/75bab2d441c945d51f17f0d32195a217072c3c15))
+* **deps:** update module go.uber.org/zap to v1.24.0 ([#268](https://github.com/tillknuesting/open-feature-operator/issues/268)) ([b7bdde8](https://github.com/tillknuesting/open-feature-operator/commit/b7bdde8944446621751e6ef70e6b0f0646adee21))
+* **deps:** update module sigs.k8s.io/controller-runtime to v0.13.1 ([edeffcd](https://github.com/tillknuesting/open-feature-operator/commit/edeffcd3ef6fe9a8d52d0d5c414512ef8cd80629))
+* for helm issues ([#206](https://github.com/tillknuesting/open-feature-operator/issues/206)) ([39febd7](https://github.com/tillknuesting/open-feature-operator/commit/39febd76d1b996afdbc24399bcd08b502621c6cc))
+* include assets in release ([#109](https://github.com/tillknuesting/open-feature-operator/issues/109)) ([b835abb](https://github.com/tillknuesting/open-feature-operator/commit/b835abb48ae8ca3c9c63abd51ae5614a4068c003))
+* include release tag in helm charts publishing ([2746716](https://github.com/tillknuesting/open-feature-operator/commit/27467164dcd05b0220e0857bf79e42d62e7a40a9))
+* nil pointer dereference ([#216](https://github.com/tillknuesting/open-feature-operator/issues/216)) ([d975066](https://github.com/tillknuesting/open-feature-operator/commit/d975066f96a5f9caf8af8d513076480a33943257))
+* package signing fixes ([36597f4](https://github.com/tillknuesting/open-feature-operator/commit/36597f484c85effd6a993f44b97fcd541d34c515))
+* Package signing should happen in the oci workflow. ([a04a110](https://github.com/tillknuesting/open-feature-operator/commit/a04a110e29b1725a66d0f4b529741947ebb7c798))
+* rbac ([#86](https://github.com/tillknuesting/open-feature-operator/issues/86)) ([4358ed9](https://github.com/tillknuesting/open-feature-operator/commit/4358ed94f08ffcc83828a0eb67055e16e5e2ca44))
+* remove redundant name ([#189](https://github.com/tillknuesting/open-feature-operator/issues/189)) ([664bd73](https://github.com/tillknuesting/open-feature-operator/commit/664bd7314e376b23a01247b5c027c04a9ac26329))
+* resolve issue with templated DNS name in cert ([65068df](https://github.com/tillknuesting/open-feature-operator/commit/65068df3019312a965271e50c52bbb90b68665c0))
+* set sbom dir ([#178](https://github.com/tillknuesting/open-feature-operator/issues/178)) ([143adf9](https://github.com/tillknuesting/open-feature-operator/commit/143adf910fe15a8b8af31dff48743352ab203d83))
+* set sbom dir ([#180](https://github.com/tillknuesting/open-feature-operator/issues/180)) ([616272d](https://github.com/tillknuesting/open-feature-operator/commit/616272d6d693115a22839cf52eb8fd448609ad6c))
+* upgrade dependencies with vulnerabilities ([#90](https://github.com/tillknuesting/open-feature-operator/issues/90)) ([58cdd4e](https://github.com/tillknuesting/open-feature-operator/commit/58cdd4ee7c6989e44258bad3e9ed75a3bb465cae))
+* Upload sbom ([#175](https://github.com/tillknuesting/open-feature-operator/issues/175)) ([813c646](https://github.com/tillknuesting/open-feature-operator/commit/813c6469ecc18101f60c593282ed32d7579f5880))
+* Upload sbom by name ([#176](https://github.com/tillknuesting/open-feature-operator/issues/176)) ([7d0fcd0](https://github.com/tillknuesting/open-feature-operator/commit/7d0fcd0ba7eeee1b2424189c7e5f5f92bc1fffac))
+* Version fix ([#284](https://github.com/tillknuesting/open-feature-operator/issues/284)) ([a9c6f15](https://github.com/tillknuesting/open-feature-operator/commit/a9c6f154589f1e00e60883c229b3ee29d7d2e9aa))
+
 ## [0.2.23](https://github.com/open-feature/open-feature-operator/compare/v0.2.22...v0.2.23) (2023-01-06)
 
 
